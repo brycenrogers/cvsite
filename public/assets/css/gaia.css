@@ -2577,7 +2577,7 @@ a,
 }
 
 .section-our-team-freebie .container {
-  margin-top: 14vh;
+  margin-top: 5vh;
   margin-bottom: 50px;
 }
 
@@ -2608,6 +2608,7 @@ a,
 
 .image-clients {
   width: 90px;
+  height: 90px;
   margin: 0 auto;
   margin-right: 8px;
   margin-left: 8px;
@@ -3733,4 +3734,43 @@ body {
   .section-pricing .row [class^="col-"] {
     padding: 0;
   }
+}
+
+.title-area .image-about {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.tech-table th, .tech-table td {
+  text-align: center;
+  width: 33%;
+}
+
+.tech-table td.skill-type {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.btn .pe-7s {
+  font-size: 18px;
+  vertical-align: sub;
+  font-weight: bold;
+  line-height: inherit;
+}
+
+.btn-active {
+    cursor: default;
+    color: #448dff;
+    border-color: #448dff;
+}
+
+.btn-complete {
+    cursor: default;
+    color: #50af55;
+    border-color: #50af55;
+}
+
+.card a {
+    color: #448dff;
 }
