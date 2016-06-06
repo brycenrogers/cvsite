@@ -48,11 +48,24 @@ $(document).ready(function(){
     $navbar = $('.navbar[color-on-scroll]');
     scroll_distance = $navbar.attr('color-on-scroll') || 500;
 
-    $('.google-map').each(function(){
-        var lng = $(this).data('lng');
-        var lat = $(this).data('lat');
+    $("#nav ul li a[href^='#']").on('click', function (e) {
 
-        gaia.initGoogleMaps(this, lat, lng);
+        // prevent default anchor click behavior
+        e.preventDefault();
+
+        // store hash
+        var hash = this.hash;
+
+        // animate
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 300, function () {
+
+            // when done, add hash to url
+            // (default click behaviour)
+            window.location.hash = hash;
+        });
+
     });
 
 });

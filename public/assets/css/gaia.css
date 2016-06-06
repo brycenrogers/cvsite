@@ -1074,7 +1074,8 @@ a,
   opacity: .7;
   background: #333;
 }
-.filter .title-area .description {
+.filter .title-area .description,
+.contact-form p.description {
   color: #FFFFFF;
 }
 .filter .separator {
@@ -2514,7 +2515,7 @@ a,
   padding: 0;
 }
 .section-get-started .container {
-  margin: 15vh auto;
+  margin: 8vh auto;
 }
 
 .section-contact-4 .parallax,
@@ -3742,6 +3743,18 @@ body {
     margin-bottom: 20px;
 }
 
+@media (max-width: 992px) {
+    .title-area .image-about {
+        width: 130px;
+        margin-top: 30px;
+    }
+    .section-header .content h1 {
+        font-size: 2.5em;
+        letter-spacing: 0.07em;
+        line-height: 1.25;
+    }
+}
+
 .tech-table th, .tech-table td {
   text-align: center;
   width: 33%;
@@ -3759,18 +3772,60 @@ body {
   line-height: inherit;
 }
 
-.btn-active {
-    cursor: default;
-    color: #448dff;
-    border-color: #448dff;
-}
-
-.btn-complete {
+.btn-active, .btn-active:hover
+.btn-active:active {
     cursor: default;
     color: #50af55;
     border-color: #50af55;
 }
 
+.btn-complete, .btn-complete:hover,
+.btn-complete:active {
+    cursor: default;
+    color: #448dff;
+    border-color: #448dff;
+}
+
+.btn-freelance-available, .btn-freelance-available:hover,
+.btn-freelance-available:active, .btn-freelance-available:focus {
+    color: #ffffff;
+    border-color: #50af55;
+    background-color: #50af55;
+}
+
+.btn-send, .btn-send:hover, .btn-send:active, .btn-send:focus {
+    color: #ffffff;
+    border-color: #448dff;
+    background-color: #448dff;
+}
+
 .card a {
     color: #448dff;
+}
+
+.card .description .closed {
+    font-style: italic;
+}
+
+.contact-form input  {
+    color: #000000;
+}
+
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #aaa;
+}
+.contact-form input:-moz-placeholder,
+.contact-form textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #aaa;
+   opacity:  1;
+}
+.contact-form input::-moz-placeholder,
+.contact-form textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #aaa;
+   opacity:  1;
+}
+.contact-form input:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #aaa;
 }
