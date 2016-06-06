@@ -2467,7 +2467,7 @@ a,
   position: relative;
   z-index: 100;
   display: block;
-  margin-top: 30vh;
+  margin-top: 50vh;
   text-align: center;
 }
 .section-get-started .title-header,
@@ -3791,6 +3791,7 @@ body {
     color: #ffffff;
     border-color: #50af55;
     background-color: #50af55;
+    cursor: default;
 }
 
 .btn-send, .btn-send:hover, .btn-send:active, .btn-send:focus {
