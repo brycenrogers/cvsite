@@ -112,6 +112,16 @@ $('a[data-scroll="true"]').click(function(e){
 
 });
 
+$('#send-message').click(function() {
+    $.ajax({
+        method: 'post',
+        url: "/message/send",
+        context: document.body
+    }).done(function() {
+        $( this ).addClass( "done" );
+    });
+});
+
 gaia = {
     misc:{
         navbar_menu_visible: 0
