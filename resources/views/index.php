@@ -60,10 +60,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="btn btn-white btn-fill">Contact</a>
+                        <a href="https://www.linkedin.com/in/brycen-rogers-81170516" class="btn btn-white btn-fill">LinkedIn</a>
                     </li>
                     <li>
-                        <a href="#contact" class="btn btn-white btn-fill">Resume / CV</a>
+                        <a href="#contact" class="btn btn-white btn-fill">Contact</a>
                     </li>
                 </ul>
             </div>
