@@ -55,12 +55,12 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right navbar-uppercase">
                     <li>
-                        <a href="http://github.com/brycenrogers" class="btn btn-white btn-fill">
+                        <a href="http://github.com/brycenrogers" target="_blank" class="btn btn-white btn-fill">
                             GitHub
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/brycen-rogers-81170516" class="btn btn-white btn-fill">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/brycen-rogers-81170516" target="_blank" class="btn btn-white btn-fill">LinkedIn</a>
                     </li>
                     <li>
                         <a href="#contact" class="btn btn-white btn-fill">Contact</a>
