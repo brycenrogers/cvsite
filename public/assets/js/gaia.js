@@ -87,10 +87,10 @@ $(window).on('scroll',function(){
 
     gaia.checkScrollForTransparentNavbar();
 
-
-    if(window_width > 992){
-        gaia.checkScrollForParallax();
-    }
+    // Disable parallax
+    // if(window_width > 992){
+    //     gaia.checkScrollForParallax();
+    // }
 
     if(content_opacity == 1 ){
         gaia.checkScrollForContentTransitions();
@@ -113,12 +113,41 @@ $('a[data-scroll="true"]').click(function(e){
 });
 
 $('#send-message').click(function() {
+    $('#send-message-success').hide();
+    $('#send-message-errors').hide();
+    // Submit the form if all error checks passed
+    var name = $('#input-name').val();
+    var email = $('#input-email').val();
+    var message = $('#textarea-message').val();
+    var recaptcha = grecaptcha.getResponse();
     $.ajax({
-        method: 'post',
         url: "/message/send",
-        context: document.body
-    }).done(function() {
-        $( this ).addClass( "done" );
+        cache: false,
+        method: 'post',
+        data: {
+            name: name,
+            email: email,
+            message: message,
+            recaptcha: recaptcha
+        }
+    })
+    .success(function (response) {
+        // Clear form and show message
+        $('#send-message-success').fadeIn("fast");
+    })
+    .error(function (response) {
+        var responseText = $.parseJSON(response.responseText);
+        var errors = "";
+        if (typeof responseText === 'object') {
+            $.each(responseText, function (key, value) {
+                errors += value + "<br>";
+            });
+        } else {
+            errors = response.status + " " + response.statusText;
+        }
+
+        $('#send-message-errors').html(errors).fadeIn("fast");
+        grecaptcha.reset();
     });
 });
 

@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\User;
 use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -34,19 +33,6 @@ class AuthServiceProvider extends ServiceProvider
         $this->app['auth']->viaRequest('api', function ($request) {
             if ($request->input('api_token')) {
                 return User::where('api_token', $request->input('api_token'))->first();
-            }
-        });
-
-        Validator::extend('recaptcha', function($attribute, $value, $parameters, $validator) {
-
-            $recaptcha = new \ReCaptcha\ReCaptcha(env('RECAPTCHA_SECRET', ''));
-            $resp = $recaptcha->verify($value);
-            if ($resp->isSuccess()) {
-                return true;
-            } else {
-                $errors = $resp->getErrorCodes();
-                Log::info("Recaptcha Error: " . json_encode($errors));
-                return false;
             }
         });
     }

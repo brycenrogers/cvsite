@@ -213,7 +213,7 @@
                                                 <div class="description">
                                                     <h3 class="title">Linken</h3>
                                                     <p class="small-text">
-                                                        Web
+                                                        Web App
                                                     </p>
                                                     <p class="description">
                                                         <a href="https://linken.me" target="_blank">Linken</a> is an open-source bookmarking and sharing tool.
@@ -308,20 +308,16 @@
                 <p class="description">
                     I have always had a passionate interest in computers, design, and technology. I started learning fine art skills at a young age
                     and eventually moved to digital art and design. I built my first website at 12 and became fascinated with the web.
-                    I learned HTML, CSS, JS, and Flash, and started doing freelance projects for clients. This led to a focus on UI/UX which turned
-                    into a career path.
+                    I learned HTML, CSS, JS, Flash, and some of the LAMP stack and started doing freelance projects for clients.
+                    This led to a focus on UI/UX which turned into a career path.
                 </p>
                 <p class="description">
                     After 4 years of designing interactions I became frustrated with my inability to fully build the ideas I had,
-                    so I started looking into software engineering. After a short time, I quickly realized that programming was my true passion.
+                    so I started looking into software engineering. After a short time, I quickly realized that programming was my true calling.
                 </p>
                 <p class="description">
-                    I programmed every day, learning as much as possible.
-                </p>
-                <p class="description">
-                    I started with ASP and MS Access databases, then moved to the LAMP stack. I began writing ASP.NET and C# professionally in 2011
-                    and then moved into a new role working with CodeIgniter, Doctrine, and lots of javascript. Since then my interest in mobile has
-                    increased and I've written two full-featured iOS apps.
+                    I began writing ASP.NET and C# professionally in 2011 and then moved into a new role working with CodeIgniter, Doctrine, and lots of javascript.
+                    Since then my interest in mobile has increased and I've written two full-featured iOS apps.
                 </p>
                 <p class="description">
                     Lately I've been learning Swift and working on Linken - an open-source tool for remembering things written in Laravel and PHP7.
@@ -373,6 +369,10 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
+                                    <div id="send-message-success" class="btn btn-freelance-available btn-block">
+                                        Message Sent
+                                    </div>
+                                    <div id="send-message-errors" class="btn btn-danger btn-block"></div>
                                     <button id="send-message" type="submit" class="btn btn-send">Send Message</button>
                                 </div>
                             </div>

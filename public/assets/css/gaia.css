@@ -3756,8 +3756,8 @@ body {
 }
 
 .tech-table th, .tech-table td {
-  text-align: center;
-  width: 33%;
+    text-align: center;
+    width: 33%;
 }
 
 .tech-table td.skill-type {
@@ -3766,13 +3766,13 @@ body {
 }
 
 .btn .pe-7s {
-  font-size: 18px;
-  vertical-align: sub;
-  font-weight: bold;
-  line-height: inherit;
+    font-size: 18px;
+    vertical-align: sub;
+    font-weight: bold;
+    line-height: inherit;
 }
 
-.btn-active, .btn-active:hover
+.btn-active, .btn-active:hover,
 .btn-active:active {
     cursor: default;
     color: #50af55;
@@ -3818,15 +3818,20 @@ body {
 }
 .contact-form input:-moz-placeholder,
 .contact-form textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #aaa;
-   opacity:  1;
+    color:    #aaa;
+    opacity:  1;
 }
 .contact-form input::-moz-placeholder,
 .contact-form textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #aaa;
-   opacity:  1;
+    color:    #aaa;
+    opacity:  1;
 }
 .contact-form input:-ms-input-placeholder,
 .contact-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #aaa;
+    color:    #aaa;
+}
+
+#send-message-success,
+#send-message-errors {
+  display: none;
 }
