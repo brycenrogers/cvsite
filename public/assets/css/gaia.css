@@ -3834,4 +3834,5 @@ body {
 #send-message-success,
 #send-message-errors {
   display: none;
+  margin-bottom: 20px;
 }
