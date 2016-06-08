@@ -362,17 +362,19 @@
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <div style="width: 302px; margin: 0 auto;">
+                                <div class="recaptcha-container">
                                     <div class="g-recaptcha" data-sitekey="6LdI2SETAAAAAIAarQ9DHKWj7F1_MTMm1egpSPur"></div>
                                 </div>
-                                <br><br>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <div id="send-message-success" class="btn btn-freelance-available btn-block">
                                         Message Sent
                                     </div>
-                                    <div id="send-message-errors" class="btn btn-danger btn-block"></div>
+                                    <div id="send-message-errors" class="alert alert-danger">
+                                        <button id="send-message-errors-close" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <div id="send-message-errors-text"></div>
+                                    </div>
                                     <button id="send-message" type="submit" class="btn btn-send">Send Message</button>
                                 </div>
                             </div>
@@ -400,9 +402,6 @@
 
 <!--  js library for devices recognition -->
 <script type="text/javascript" src="assets/js/modernizr.js"></script>
-
-<!--  script for google maps   -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 <!--   file where we handle all the script from the Gaia - Bootstrap Template   -->
 <script type="text/javascript" src="assets/js/gaia.js"></script>

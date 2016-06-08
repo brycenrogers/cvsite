@@ -146,9 +146,14 @@ $('#send-message').click(function() {
             errors = response.status + " " + response.statusText;
         }
 
-        $('#send-message-errors').html(errors).fadeIn("fast");
+        $('#send-message-errors-text').html(errors);
+        $('#send-message-errors').fadeIn("fast");
         grecaptcha.reset();
     });
+});
+
+$('#send-message-errors-close').click(function () {
+    $('#send-message-errors').hide();
 });
 
 gaia = {

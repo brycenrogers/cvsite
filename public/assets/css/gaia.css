@@ -483,7 +483,8 @@ a,
 }
 
 .btn,
-.navbar .navbar-nav > li > a.btn {
+.navbar .navbar-nav > li > a.btn,
+.alert-danger {
   border-width: 1px;
   background-color: transparent;
   font-weight: 600;
@@ -559,7 +560,8 @@ a,
 }
 
 .btn-danger,
-.navbar .navbar-nav > li > a.btn-danger {
+.navbar .navbar-nav > li > a.btn-danger,
+.alert-danger {
   border-color: #e78b90;
   color: #e78b90;
 }
@@ -568,7 +570,8 @@ a,
 .navbar .navbar-nav > li > a.btn-danger:focus,
 .navbar .navbar-nav > li > a.btn-danger:active,
 .navbar .navbar-nav > li > a.btn-danger.active, .open >
-.navbar .navbar-nav > li > a.btn-danger.dropdown-toggle {
+.navbar .navbar-nav > li > a.btn-danger.dropdown-toggle,
+.alert-danger:hover, .alert-danger:focus, .alert-danger:active {
   background-color: transparent;
   color: #e47a80;
   border-color: #e47a80;
@@ -581,7 +584,8 @@ a,
   border-color: #e78b90;
 }
 .btn-danger.btn-fill,
-.navbar .navbar-nav > li > a.btn-danger.btn-fill {
+.navbar .navbar-nav > li > a.btn-danger.btn-fill,
+.alert-danger {
   color: #FFFFFF;
   background-color: #e78b90;
   opacity: 1;
@@ -592,7 +596,8 @@ a,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill:focus,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill:active,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill.active, .open >
-.navbar .navbar-nav > li > a.btn-danger.btn-fill.dropdown-toggle {
+.navbar .navbar-nav > li > a.btn-danger.btn-fill.dropdown-toggle,
+.alert-danger:hover, .alert-danger:focus, .alert-danger:active {
   background-color: #e47a80;
   color: #FFFFFF;
 }
@@ -604,7 +609,8 @@ a,
 .navbar .navbar-nav > li > a.btn-danger .caret {
   border-top-color: #e78b90;
 }
-
+.alert-danger {
+}
 .btn-black,
 .navbar .navbar-nav > li > a.btn-black {
   border-color: #333333;
@@ -3808,6 +3814,10 @@ body {
     font-style: italic;
 }
 
+.contact-form .form-group {
+    margin-bottom: 0;
+}
+
 .contact-form input  {
     color: #000000;
 }
@@ -3829,6 +3839,12 @@ body {
 .contact-form input:-ms-input-placeholder,
 .contact-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color:    #aaa;
+}
+
+.recaptcha-container {
+    width: 302px;
+    margin: 0 auto;
+    padding-bottom: 25px;
 }
 
 #send-message-success,
