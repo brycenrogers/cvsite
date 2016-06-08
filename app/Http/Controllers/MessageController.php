@@ -38,7 +38,7 @@ class MessageController extends Controller
         // Send email
         Mail::send('emails.contact', $data, function($message) use ($contactEmail, $contactEmailName)
         {
-            $message->to($contactEmail, $contactEmailName)->subject('Contact Form Request');
+            $message->to($contactEmail, $contactEmailName)->subject('Contact Request from brycenrogers.com');
         });
     }
 }
