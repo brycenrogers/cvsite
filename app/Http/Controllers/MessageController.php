@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\Mail;
 class MessageController extends Controller
 {
     /**
-     * 
+     * Validate form and send contact form email
+     *
+     * $request Request
      */
     public function postSend(Request $request)
     {
