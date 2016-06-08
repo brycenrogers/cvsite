@@ -24,7 +24,19 @@ class MessageController extends Controller
             'recaptcha.required' => "Recaptcha required"
         ]);
 
-        // Send email
+        // Email data
+        $contactEmail = env('CONTACT_EMAIL', 'brycenrogers@gmail.com');
+        $contactEmailName = env('CONTACT_EMAIL_NAME', 'Brycen Rogers');
+        $data = [
+            'email' => $request->input('email'),
+            'emailName' => $request->input('name'),
+            'emailMessage' => $request->input('message')
+        ];
 
+        // Send email
+        Mail::send('emails.contact', $data, function($message) use ($contactEmail, $contactEmailName)
+        {
+            $message->to($contactEmail, $contactEmailName)->subject('Contact Form Request');
+        });
     }
 }
