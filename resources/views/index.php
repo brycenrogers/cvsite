@@ -398,6 +398,7 @@
 <!--   core js files    -->
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.js" type="text/javascript"></script>
+<script src="assets/js/spin.min.js" type="text/javascript"></script>
 
 <!--  js library for devices recognition -->
 <script type="text/javascript" src="assets/js/modernizr.js"></script>

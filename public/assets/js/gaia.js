@@ -129,11 +129,30 @@ $('#send-message').click(function() {
             email: email,
             message: message,
             recaptcha: recaptcha
+        },
+        beforeSend: function () {
+            // Disable button
+            var button = $('#send-message');
+            button.prop('disabled', true);
+
+            // Add spinner
+            button.html("");
+            var spinner = new Spinner({
+                lines: 11,
+                length: 5,
+                width: 2,
+                radius: 6,
+                color: "#ffffff"
+            }).spin();
+            button.html(spinner.el);
         }
     })
     .success(function (response) {
         // Clear form and show message
         $('#send-message-success').fadeIn("fast");
+        $('#input-name').val("");
+        $('#input-email').val("");
+        $('#textarea-message').val("");
     })
     .error(function (response) {
         var responseText = $.parseJSON(response.responseText);
@@ -149,7 +168,11 @@ $('#send-message').click(function() {
         $('#send-message-errors-text').html(errors);
         $('#send-message-errors').fadeIn("fast");
         grecaptcha.reset();
+    })
+    .complete(function () {
+        $('#send-message').html('Send Message').prop('disabled', false);
     });
+
 });
 
 $('#send-message-errors-close').click(function () {
